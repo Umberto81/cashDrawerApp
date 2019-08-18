@@ -10,7 +10,7 @@ const useLogin = (props) =>{
     const [logged, setLogged] = useState(initialValue);
     const [value, setvalue] = useState();
     const [errors, setErrors] = useState([]);
-
+    const url = window.location.origin;
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -61,7 +61,7 @@ const useLogin = (props) =>{
 
     }        
      
-        axios.get('http://localhost:5000/login')
+        axios.get(url + '/login')
         .then(response =>{
             if(parseInt(nums) === response.data[0].password ){
                 setLogged(true);
