@@ -83,11 +83,11 @@ productsRoute.route('/description/:description').get(product_controller.findProd
 
  loginRoute.route('/addLogin').post(login_controller.saveLogin);
  loginRoute.route('/delete/:id').delete(login_controller.deleteLoginById);
- loginRoute.route('/').get(login_controller.getLoginCredentials);
+ loginRoute.route('https://cash-drawer.herokuapp.com/').get(login_controller.getLoginCredentials);
 
 
 app.use('/products', productsRoute);
-app.use('https://cash-drawer.herokuapp.com/login', loginRoute);
+app.use('/login', loginRoute);
 
 
 
