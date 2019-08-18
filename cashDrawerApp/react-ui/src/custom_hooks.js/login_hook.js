@@ -61,7 +61,7 @@ const useLogin = (props) =>{
 
     }        
      
-        axios.get('/login')
+        axios.get('login')
         .then(response =>{
             if(parseInt(nums) === response.data[0].password ){
                 setLogged(true);

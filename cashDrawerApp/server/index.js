@@ -83,7 +83,7 @@ productsRoute.route('/description/:description').get(product_controller.findProd
 
  loginRoute.route('/addLogin').post(login_controller.saveLogin);
  loginRoute.route('/delete/:id').delete(login_controller.deleteLoginById);
- loginRoute.route('https://cash-drawer.herokuapp.com/').get(login_controller.getLoginCredentials);
+ loginRoute.route('/').get(login_controller.getLoginCredentials);
 
 
 app.use('/products', productsRoute);
@@ -93,12 +93,6 @@ app.use('/login', loginRoute);
 
   // Priority serve any static files.
   app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
-
-  // Answer API requests.
-  app.get('/api', function (req, res) {
-    res.set('Content-Type', 'application/json');
-    res.send('{"message":"Hello from the custom server!"}');
-  });
 
   // All remaining requests return the React app, so it can handle routing.
   app.get('*', function(request, response) {
