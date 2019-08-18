@@ -87,7 +87,7 @@ productsRoute.route('/description/:description').get(product_controller.findProd
 
 
 app.use('/products', productsRoute);
-app.use('/login', loginRoute);
+app.use('https://cash-drawer.herokuapp.com/login', loginRoute);
 
 
 
