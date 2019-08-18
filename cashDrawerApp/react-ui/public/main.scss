@@ -1,0 +1,104 @@
+
+  @import "../node_modules/bootstrap/scss/_functions";
+  @import "../node_modules/bootstrap/scss/_variables";
+  @import "../node_modules/bootstrap/scss/_mixins";
+  @import "../node_modules/bootstrap/scss/_tables";
+  @import "../node_modules/bootstrap/scss/_navbar";
+  @import "../node_modules/bootstrap/scss/_nav";
+  @import "../node_modules/bootstrap/scss/_card";
+  @import "../node_modules/bootstrap/scss/_modal";
+
+
+
+
+$main-color: #8fbdec !important;
+
+$theme-colors: (
+    "secondary": #bfc0bf,
+    "danger": #ff4136
+  );
+  $body-bg: #365063;
+
+  $btn-font-size: 1.8rem;
+  
+  .bg-light {
+    background-color: $main-color;
+}
+
+a{
+  color: $main-color;
+}
+
+a:hover{
+  color: #58a2eb !important;
+}
+
+  .btn-secondary {
+    border-color: black !important;
+    background-color: $main-color;
+    color: black;
+  }  
+
+  .btn-secondary:hover{
+    background-color:   #58a2eb !important;
+  }
+
+  .btn-outline-secondary {
+    color: $main-color;
+    border-color: #bfc0bf;
+}
+
+.btn-outline-secondary:hover {
+
+  background-color: #35444e !important;
+}
+ 
+  .table {
+    color: $main-color;
+}
+
+.card-img{
+  width: 50% !important;
+}
+
+.card-title{
+  margin-top: -20px;
+  color: $main-color;
+}
+.card-subtitle{
+  color: $main-color;
+}
+
+.card-body{
+  color: $main-color;
+}
+
+.modal-body, .modal-footer, .modal-header{
+  background-color: $main-color;
+}
+
+
+$card-bg: #343a40;
+$card-spacer-y: .5rem ;
+
+.keyboard-flex{
+  flex: 1;
+   white-space: nowrap; 
+}
+
+.button-alphabet{
+  width: 100%;
+  white-space: nowrap;
+}
+$table-cell-padding-sm: .8rem; 
+
+*{
+
+
+  font-family: 'IBM Plex Mono', monospace;
+  
+
+}
+
+  @import "../node_modules/bootstrap/scss/bootstrap";
+
