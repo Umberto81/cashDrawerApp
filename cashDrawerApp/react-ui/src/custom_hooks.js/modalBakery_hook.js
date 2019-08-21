@@ -38,7 +38,7 @@ const useModal = () => {
 
         //request to fetch db products
 
-        axios.get('http://localhost:4000/products/section/bakery')
+        axios.get('/products/section/bakery')
             .then(response => {
                 setBakeryDetails(response.data);
             }).catch(error => {
@@ -82,7 +82,7 @@ const useModal = () => {
     //add bakeryitem to shopping list in modal window
     const toggleAdd = (product) => {
 
-        axios.get('http://localhost:4000/products/description/' + product)
+        axios.get('/products/description/' + product)
             .then(response => {
                 let copy = [...productDetails];
 
@@ -141,7 +141,7 @@ const useModal = () => {
     }
 
     const callAllItems = () =>{
-        axios.get('http://localhost:4000/products/section/bakery')
+        axios.get('/products/section/bakery')
             .then(response => {
                 //implementare il salvataggio in array
                 setBakeryDetails(response.data);

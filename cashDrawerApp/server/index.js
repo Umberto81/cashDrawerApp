@@ -1,4 +1,4 @@
-  const express = require('express');
+const express = require('express');
 const path = require('path');
 const cluster = require('cluster');
 const numCPUs = require('os').cpus().length;
@@ -19,7 +19,7 @@ const product_controller = require('./router_calls/products_controller');
 
 const login_controller = require('./router_calls/login_controller');
 const pwd = process.env.REACT_APP_MONGO_PASSWORD;
-
+console.log(process.env.REACT_APP_MONGO_PASSWORD);
 // Multi-process to utilize all CPU cores.
 if (!isDev && cluster.isMaster) {
   console.error(`Node cluster master ${process.pid} is running`);

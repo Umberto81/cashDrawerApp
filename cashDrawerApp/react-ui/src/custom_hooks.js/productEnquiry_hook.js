@@ -39,7 +39,7 @@ const useProduct = () => {
      //request to fetch db products
   const requestProduct = () => {
     if (nums !== "") {
-        axios.get('http://localhost:4000/products/' + nums)
+        axios.get('/products/' + nums)
         .then(response => {
             if(!Object.keys(response.data).length){
                 setErrors('no product found');

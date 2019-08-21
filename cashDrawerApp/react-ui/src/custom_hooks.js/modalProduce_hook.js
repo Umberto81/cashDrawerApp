@@ -3,7 +3,6 @@ import {
     useEffect
 } from 'react';
 import axios from 'axios';
-import useFunctions from './hooks';
 import {setproductDetails} from '../actions/addProductDetails';
 import { useSelector} from 'react-redux';
 import {  useDispatch } from "react-redux";
@@ -39,7 +38,7 @@ const useModal = () => {
 
         //request to fetch db products
 
-        axios.get('http://localhost:4000/products/section/produce')
+        axios.get('/products/section/produce')
             .then(response => {
                 dispatch(setProduceDetails(response.data));
             });
@@ -84,7 +83,7 @@ const useModal = () => {
     //add produceitem to shopping list in modal window
     const toggleAdd = (product) => {
 
-        axios.get('http://localhost:4000/products/description/'  + product)
+        axios.get('/products/description/'  + product)
             .then(response => {
                 let copy = [...productDetails];
 
@@ -150,7 +149,7 @@ const useModal = () => {
     }
 
     const callAllItems = () =>{
-        axios.get('http://localhost:4000/products/section/produce')
+        axios.get('/products/section/produce')
             .then(response => {
                 //implementare il salvataggio in array
                 dispatch(setProduceDetails(response.data));
